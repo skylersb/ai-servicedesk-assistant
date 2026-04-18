@@ -53,7 +53,7 @@ Final confirmation of escalation sent to IT.
 - AI + UX integration
 - Escalation logic / support workflows
 - Safety + grounded responses
-- API integration (YouTube + LLM)
+- API integration (LLM)
 
 ---
 
@@ -73,8 +73,8 @@ Designed to simulate a real Tier 1 → Tier 2 IT support pipeline.
 
 - Python (FastAPI)
 - HTML / CSS (custom UI)
+- Anthropic API
 - OpenAI API
-- YouTube API
 - Local knowledge base (TXT docs)
 
 ---
@@ -90,8 +90,8 @@ pip install -r requirements.txt
 Create a `.env` file:
 
 ```
-OPENAI_API_KEY=your_key_here
-YOUTUBE_API_KEY=your_key_here
+ANTHROPIC_API_KEY=your_anthropic_api_key_here
+OPENAI_API_KEY=your_openai_api_key_here
 ```
 
 Run the app:
