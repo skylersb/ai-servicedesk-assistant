@@ -90,8 +90,17 @@ pip install -r requirements.txt
 Create a `.env` file:
 
 ```
+# Default active provider for v1
+LLM_PROVIDER=anthropic
+
+# Anthropic / Claude
 ANTHROPIC_API_KEY=your_anthropic_api_key_here
-OPENAI_API_KEY=your_openai_api_key_here
+
+# OpenAI / ChatGPT
+# To switch to OpenAI, change:
+# LLM_PROVIDER=openai
+# and add your OpenAI key below
+# OPENAI_API_KEY=your_openai_api_key_here
 ```
 
 Run the app:
