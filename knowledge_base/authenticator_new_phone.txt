@@ -1,0 +1,9 @@
+If you got a new phone and are not receiving sign-in approval requests, your old device may still be linked to your account.
+
+Try these steps:
+1. Go to the Microsoft “Security Info” page
+2. Sign in with your work account
+3. Remove your old phone from the list
+4. Add your new phone using the Authenticator app
+
+If you’re unable to sign in, contact IT to reset your multi-factor authentication.
