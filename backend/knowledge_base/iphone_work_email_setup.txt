@@ -1,0 +1,30 @@
+Title:
+Set up work email on iPhone
+
+Problem:
+User wants to add their work email account to the built-in Mail app on an iPhone.
+
+Applies To:
+iPhone, iOS Mail app, Microsoft 365, Exchange Online
+
+Steps:
+1. Open Settings on your iPhone
+2. Scroll down and tap Mail
+3. Tap Accounts
+4. Tap Add Account
+5. Select Microsoft Exchange
+6. Enter your work email address
+7. Tap Next
+8. Sign in with your work password
+9. Complete any multi-factor authentication if prompted
+10. Choose which items to sync (Mail, Contacts, Calendars)
+11. Tap Save
+
+Troubleshooting:
+- Sign-in page does not load → Check internet connection and try again
+- Password rejected → Confirm your Microsoft 365 password works at portal.office.com
+- MFA prompt not received → Open Microsoft Authenticator and approve manually
+- Mail not syncing after setup → Remove the account and add it again
+
+Escalation:
+If you cannot complete sign-in or the account will not sync after re-adding it, contact IT support.

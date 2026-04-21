@@ -1,9 +1,0 @@
-If Microsoft Teams says your phone does not meet security requirements, it usually means your device is not fully set up for work access.
-
-Try these steps:
-1. Open the Company Portal app on your phone
-2. Make sure your device shows as “compliant”
-3. Tap “Check status” or “Sync” if available
-4. Restart your phone and try again
-
-If it still doesn’t work, IT may need to check your device enrollment.

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI ServiceDesk Assistant</title>
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <section class="hero">
+      <div class="eyebrow">Employee IT Support</div>
+      <h1>AI ServiceDesk Assistant</h1>
+      <p class="hero-subtext">Quick quided help & escalation.</p>
+
+      <div class="hero-steps">
+        <div class="hero-step">1. Ask an IT support question</div>
+        <div class="hero-step">2. Get a straightforward step-by-step answer</div>
+        <div class="hero-step">3. Escalate if the issue still isn’t resolved</div>
+      </div>
+    </section>
+
+    <aside id="chatWidget" class="chat-widget">
+  <header class="chat-header">
+    <div class="brand">
+      <div class="brand-badge">A</div>
+      <div class="brand-copy">
+        <div class="brand-title">AI ServiceDesk Assistant</div>
+        <div class="brand-subtitle">Quick guided help & escalation</div>
+      </div>
+    </div>
+
+    <div class="header-actions">
+      <button class="icon-button" id="resetBtn" title="Reset">↻</button>
+      <button class="icon-button" id="minBtn" title="Minimize">–</button>
+    </div>
+  </header>
+
+  <div class="chat-body" id="chatBody">
+    <div class="chip-section">
+      <section class="quick-start-card">
+         <button class="chip-toggle" onclick="toggleChips()">
+            <span id="chipToggleIcon">▾</span>
+          </button>
+        <h2>How can I help today?</h2>
+        <p>Pick a common issue or type your question.</p>
+        <div class="chip-grid">
+          <button class="quick-chip" data-prompt="How do I reset my password?">🔑 Reset password</button>
+          <button class="quick-chip" data-prompt="Outlook keeps asking for my password">📧 Fix Outlook sign-in</button>
+          <button class="quick-chip" data-prompt="How do I install Microsoft Authenticator on my iPhone?">🛡️ Install Authenticator</button>
+          <button class="quick-chip" data-prompt="How do I add my work Microsoft 365 email to the Mail app on my iPhone?">📱 Add work email (iPhone)</button>
+        </div>
+      </section>
+    </div>
+
+    <div id="messages" class="messages"></div>
+  </div>
+
+  <footer class="chat-footer">
+    <div id="statusText" class="status-text"></div>
+
+    <div class="input-row">
+      <input id="questionInput" type="text" placeholder="Describe your IT issue..." />
+      <button id="askBtn" class="ask-button">Ask</button>
+    </div>
+  </footer>
+</aside>
+  </div>
+
+  <button id="chatLauncher" class="chat-launcher hidden" title="Open chat">💬</button>
+
+  <script src="/assets/js/app.js"></script>
+</body>
+</html>

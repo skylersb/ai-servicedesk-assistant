@@ -1,134 +1,137 @@
-# AI ServiceDesk Assistant
+# AI ServiceDesk Assistant (RAG Helpdesk Chatbot)
 
-> AI-powered internal IT support system with RAG, guided troubleshooting, and escalation workflows.
+A lightweight AI-powered internal IT helpdesk assistant that provides step-by-step support, training resources, and escalation summaries.
 
----
-
-## 🚀 What It Does (End-to-End Flow)
-
-### 🖥️ Clean UI Experience
-![Main UI](screenshots/main-ui.png)
-
-Modern chat-style interface for internal IT support.
+Built as a portfolio project to demonstrate real-world application of:
+- Retrieval-Augmented Generation (RAG)
+- UX-focused frontend design
+- Secure AI interaction patterns
+- IT support workflow automation
 
 ---
 
-### 💬 Ask Questions → Get Real Answers
-![Q&A Example](screenshots/qa-example.png)
+## 🚀 Features
 
-Users can ask real IT issues and receive structured, step-by-step guidance.
+### 🔹 Guided IT Support
+- Step-by-step instructions for common issues
+- Structured responses (Steps, Troubleshooting, Escalation)
+
+### 🔹 Quick Actions (Common Issues)
+- Reset password
+- Fix Outlook sign-in
+- Install Microsoft Authenticator
+- Add work email (iPhone)
+
+### 🔹 Smart UI Behavior
+- Collapsible quick actions panel
+- Smooth toggle animation (CSS-based rotation)
+- Clean chat interface with typing indicators
+
+### 🔹 Helpful Training Videos
+- Context-aware video recommendations
+- Clickable resources embedded in workflow
+
+### 🔹 Escalation System
+- Generates structured ticket summary
+- Copy-to-clipboard functionality
+- Expandable ticket details view
+
+### 🔹 Safe AI Guardrails
+- Blocks unsafe or malicious requests
+- Prevents social engineering scenarios
 
 ---
 
-### 🎥 Helpful Training Videos
-![Training Videos](screenshots/videos.png)
+## 🧠 Architecture
 
-Relevant YouTube walkthroughs are embedded directly into responses.
+Frontend:
+- HTML, CSS, Vanilla JavaScript
+
+Backend:
+- Python (FastAPI)
+- RAG pipeline (knowledge base retrieval + LLM)
+
+AI Layer:
+- Claude / OpenAI (switchable)
+- Prompt-structured responses
 
 ---
+
+## 📸 Screenshots
+
+### 🏠 Main UI
+![Main UI](./screenshots/main-ui.png)
+
+### 💬 Q&A Example
+![Q&A Example](./screenshots/qa-example.png)
+
+### 🎥 Helpful Videos
+![Helpful Videos](./screenshots/helpful-videos.png)
 
 ### 🚨 Escalation Flow
-![Escalation](screenshots/escalation.png)
+![Escalation](./screenshots/escalation.png)
 
-If an issue isn’t resolved:
-- Ticket is created
-- Context is preserved
-- Ready for Tier 2 support
+### 📋 Ticket Summary
+![Ticket Summary](./screenshots/escalated-ticket-summary.png)
 
 ---
 
-### ✅ Escalated Ticket State
-![Escalated Ticket](screenshots/escalated-ticket.png)
+## 🛠️ How It Works
 
-Final confirmation of escalation sent to IT.
-
----
-
-## 🧠 What This Demonstrates
-
-**This project focuses on practical, real-world AI application — not just model usage, but workflow design.**
-
-- Retrieval-Augmented Generation (RAG)
-- Knowledge base design (real IT scenarios)
-- AI + UX integration
-- Escalation logic / support workflows
-- Safety + grounded responses
-- API integration (LLM)
+1. User asks a question or selects a quick action
+2. Query is sent to backend (`/ask`)
+3. RAG system retrieves relevant knowledge
+4. LLM generates structured response
+5. UI renders:
+   - Answer
+   - Steps
+   - Troubleshooting
+   - Escalation guidance
+6. Optional:
+   - Training videos shown
+   - Escalation summary generated
 
 ---
 
-## 🧠 System Architecture
+## 🔐 Security Considerations
 
-- User query → FastAPI backend
-- Retrieval from internal knowledge base (RAG)
-- LLM generates grounded response
-- Optional YouTube video enrichment
-- Escalation creates structured support ticket
-
-Designed to simulate a real Tier 1 → Tier 2 IT support pipeline.
+- Input filtering for unsafe prompts
+- No sensitive data exposure
+- Simulated escalation (no real ticketing integration yet)
 
 ---
 
-## 🛠️ Tech Stack
+## 📌 Future Improvements
 
-- Python (FastAPI)
-- HTML / CSS (custom UI)
-- Anthropic API
-- OpenAI API
-- Local knowledge base (TXT docs)
+- Microsoft 365 authentication (SSO)
+- Real ticketing integration (Zendesk / ServiceNow)
+- Admin-side RAG for IT teams (internal Copilot)
+- Conversation memory
+- Analytics (top issues, resolution rate)
 
 ---
 
-## ⚙️ Run Locally
+## 📦 Tech Stack
+
+- Python / FastAPI
+- JavaScript (Vanilla)
+- HTML / CSS
+- OpenAI / Anthropic APIs
+
+---
+
+## ⚡ Run Locally
 
 ```bash
-git clone https://github.com/skylersb/ai-servicedesk-assistant
-cd ai-servicedesk-assistant
 pip install -r requirements.txt
+uvicorn main:app --reload
 ```
 
-Create a `.env` file:
-
-```
-# Default active provider for v1
-LLM_PROVIDER=anthropic
-
-# Anthropic / Claude
-ANTHROPIC_API_KEY=your_anthropic_api_key_here
-
-# OpenAI / ChatGPT
-# To switch to OpenAI, change:
-# LLM_PROVIDER=openai
-# and add your OpenAI key below
-# OPENAI_API_KEY=your_openai_api_key_here
-```
-
-Run the app:
-
-```bash
-uvicorn app.main:app --reload
-```
-
-Open:
-
-```
-http://127.0.0.1:8000
-```
-
----
-
-## 🎯 Why This Project Matters
-
-This project simulates what a real internal IT support tool could look like:
-
-- Reduces ticket volume
-- Improves employee self-service
-- Provides consistent, accurate guidance
-- Bridges Tier 1 → Tier 2 support
+Then open:
+http://localhost:8000
 
 ---
 
 ## 👤 Author
 
-Skyler Blood  
-Building systems at the intersection of AI, automation, and human-centered design.
+Skyler Blood

@@ -1,0 +1,29 @@
+Title:
+Set up Microsoft Authenticator on a new phone
+
+Problem:
+User is not receiving MFA push notifications after switching to a new phone.
+
+Applies To:
+iPhone, Android, Microsoft Authenticator, Entra ID (Azure AD)
+
+Steps:
+1. Install Microsoft Authenticator from the App Store or Google Play
+2. Open the app and tap "Add account"
+3. Select "Work or school account"
+4. On a computer, go to: https://aka.ms/mfasetup
+5. Sign in with your work account
+6. Click "Add sign-in method"
+7. Choose "Authenticator app"
+8. Scan the QR code with your phone
+9. Approve the test notification
+10. Remove your old device from the Security Info page (if listed)
+
+Troubleshooting:
+- No push notifications → Enable notifications for Authenticator in phone settings
+- QR code not working → Retry setup or choose manual entry
+- App not prompting → Remove and re-add the account
+- Still failing → Restart phone and try again
+
+Escalation:
+If you cannot sign in or lost access to your old device, contact IT to reset MFA.

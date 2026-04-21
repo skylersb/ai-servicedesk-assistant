@@ -1,0 +1,28 @@
+Title:
+Fix Teams mobile access / device compliance issue
+
+Problem:
+User cannot access Teams or company data on mobile due to compliance policy.
+
+Applies To:
+iPhone, Android, Microsoft Teams, Intune-managed devices
+
+Steps:
+1. Install Microsoft Teams (if not installed)
+2. Install Company Portal app from the App Store or Google Play
+3. Open Company Portal
+4. Sign in with your work account
+5. Follow steps to register your device
+6. Ensure:
+   - Passcode is enabled
+   - Device is not jailbroken/rooted
+   - OS is up to date
+7. Reopen Teams after compliance is complete
+
+Troubleshooting:
+- Device not compliant → Complete all Company Portal steps
+- Access denied → Wait a few minutes after setup
+- Still blocked → Remove and re-add account
+
+Escalation:
+If your device shows compliant but still cannot access Teams, contact IT.
